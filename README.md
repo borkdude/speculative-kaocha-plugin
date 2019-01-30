@@ -15,7 +15,7 @@ Include this plugin as a dependency. E.g. for `tools.deps.alpha`:
     {:extra-deps
       {lambdaisland/kaocha {:mvn/version "0.0-389"}
        speculative/kaocha-plugin {:git/url "https://github.com/borkdude/speculative-kaocha-plugin"
-                                  :sha "497332248510f4a8c47c73a74ea29af60616c063"}}}}}
+                                  :sha "72e9fedaa15cca0384e055d551e695d6a2e27a53"}}}}}
 ```
 
 A Clojars release will be made available soon. If interested, feel free to
