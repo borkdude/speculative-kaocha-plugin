@@ -43,8 +43,8 @@ basis.
 ## Demo
 
 ``` clojure
-$ cat test/repro/core_test.cljc
-(ns repro.core-test
+$ cat test/demo/core_test.cljc
+(ns demo.core-test
   (:require [clojure.test :as t]))
 
 (t/deftest foo
@@ -58,7 +58,7 @@ $ clojure -A:test -m kaocha.runner --plugin speculative-kaocha.plugin/instrument
 [(E)]
 Randomized with --seed 1206313428
 
-ERROR in repro.core-test/foo (alpha.clj:132)
+ERROR in demo.core-test/foo (alpha.clj:132)
 Exception: clojure.lang.ExceptionInfo: Call to #'clojure.core/flatten did not conform to spec.
 {:clojure.spec.alpha/problems [{:path [:x :clojure.spec.alpha/pred], :pred clojure.core/sequential?, :val 1, :via [:speculative.specs/sequential], :in [0]} {:path [:x :clojure.spec.alpha/nil], :pred nil?, :val 1, :via [], :in [0]}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$regex_spec_impl$reify__2509 0x76596288 "clojure.spec.alpha$regex_spec_impl$reify__2509@76596288"], :clojure.spec.alpha/value (1), :clojure.spec.alpha/fn clojure.core/flatten, :clojure.spec.alpha/args (1), :clojure.spec.alpha/failure :instrument, :clojure.spec.test.alpha/caller {:file "core.clj", :line 665, :var-scope clojure.core/apply}}
 ```
