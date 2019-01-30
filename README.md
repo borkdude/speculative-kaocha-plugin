@@ -19,7 +19,7 @@ Include this plugin as a dependency. E.g. for `tools.deps.alpha`:
 ```
 
 A Clojars release will be made available soon. If interested, feel free to
-remind me on Clojurians Slack or Twitter.
+remind [@borkdude](https://twitter.com/borkdude) on Clojurians Slack or Twitter.
 
 ## Configuration
 
