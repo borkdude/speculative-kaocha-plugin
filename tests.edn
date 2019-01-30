@@ -1,0 +1,16 @@
+#kaocha/v1
+{:tests [;; Clojure
+         {:id :unit
+          :kaocha/ns-patterns   ["unit$"]}
+         {:id :no-instrument
+          :speculative-kaocha.plugin/no-instrument true
+          :kaocha/ns-patterns   ["no-instrument$"]}
+         ;; ClojureScript, why do they not work?
+         #_{:id :unit-cljs
+          :type :kaocha.type/cljs
+          :kaocha/ns-patterns   ["unit$"]}
+         #_{:id :no-instrument-cljs
+          :type :kaocha.type/cljs
+          :speculative-kaocha.plugin/no-instrument true
+          :kaocha/ns-patterns   ["no-instrument$"]}]
+ :plugins [:speculative-kaocha.plugin/instrument]}

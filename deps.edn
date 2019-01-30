@@ -1,0 +1,7 @@
+{:deps {speculative {:mvn/version "0.0.3-SNAPSHOT"}}
+ :aliases
+ {:test {:extra-deps {respeced {:mvn/version "0.0.1"}
+                      lambdaisland/kaocha {:mvn/version "0.0-389"}
+                      lambdaisland/kaocha-cljs {:mvn/version "0.0-16"}
+                      ;; this won't be needed in CLJS > 1.10.439
+                      org.clojure/test.check {:mvn/version "RELEASE"}}}}}
