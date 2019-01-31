@@ -10,11 +10,15 @@
 
 (defplugin ::instrument
   (pre-test [test test-plan]
-            (when (and (test-suite? test)
-                       (not (::no-instrument test)))
-              (instrument))
-            test)
+    (let [suite? (into #{}
+                       (map :kaocha.testable/id)
+                       (:kaocha.test-plan/tests test-plan))]
+      (when (and (suite? (:kaocha.testable/id test))
+                 (not (::no-instrument test)))
+        (instrument)))
+    test)
+
   (post-test [test test-plan]
-             (when (test-suite? test)
-               (unstrument))
-             test))
+    (when (test-suite? test)
+      (unstrument))
+    test))
