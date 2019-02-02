@@ -63,6 +63,24 @@ Exception: clojure.lang.ExceptionInfo: Call to #'clojure.core/flatten did not co
 {:clojure.spec.alpha/problems [{:path [:x :clojure.spec.alpha/pred], :pred clojure.core/sequential?, :val 1, :via [:speculative.specs/sequential], :in [0]} {:path [:x :clojure.spec.alpha/nil], :pred nil?, :val 1, :via [], :in [0]}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$regex_spec_impl$reify__2509 0x76596288 "clojure.spec.alpha$regex_spec_impl$reify__2509@76596288"], :clojure.spec.alpha/value (1), :clojure.spec.alpha/fn clojure.core/flatten, :clojure.spec.alpha/args (1), :clojure.spec.alpha/failure :instrument, :clojure.spec.test.alpha/caller {:file "core.clj", :line 665, :var-scope clojure.core/apply}}
 ```
 
+## Selectively disabling specs
+
+In the unfortunate event that a speculative spec is wrong, or your code is
+offending a spec and you don't want to fix it right away, you can selectively
+disable specs by `def`'ing them to `nil` after loading `speculative.instrument`.
+
+E.g. `(s/def clojure.core/re-find nil)`.
+
+In `deps.edn` this can be done as follows:
+
+``` clojure
+:main-opts
+["-e" "(require,'[speculative.instrument])"
+ "-e" "(require,'[clojure.spec.alpha,:as,s])"
+ "-e" "(s/def,clojure.core/re-find,nil)"
+ "-m" "kaocha.runner" "--no-capture-output"]
+```
+
 ## Tests
 
     clojure -A:test -m kaocha.runner
