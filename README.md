@@ -83,7 +83,8 @@ In `deps.edn` this can be done as follows:
 
 ## Tests
 
-    clojure -A:test -m kaocha.runner
+    clojure -A:test
+    lein kaocha
 
 ## License
 
