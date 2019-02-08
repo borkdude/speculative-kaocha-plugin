@@ -1,4 +1,4 @@
-(defproject speculative/kaocha-plugin "0.0.1"
+(defproject speculative/kaocha-plugin "0.0.2-SNAPSHOT"
   :description "Kaocha plugin which instruments speculative specs during testing"
   :url "https://github.com/borkdude/speculative-kaocha-plugin"
   :scm {:name "git"
