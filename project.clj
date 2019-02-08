@@ -6,11 +6,11 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.10.0"]
-                 [speculative "0.0.3"]]
+                 [speculative "0.0.3"]
+                 [lambdaisland/kaocha "0.0-389" :scope "provided"]
+                 [lambdaisland/kaocha-cljs "0.0-16" :scope "provided"]]
   :profiles {:kaocha {:dependencies
                       [[respeced "0.0.1"]
-                       [lambdaisland/kaocha "0.0-389"]
-                       [lambdaisland/kaocha-cljs "0.0-16"]
                        [org.clojure/clojurescript "1.10.516"]
                        [org.clojure/test.check "0.9.0"]]}}
   :aliases {"kaocha" ["with-profile" "+kaocha" "run" "-m" "kaocha.runner"]}
