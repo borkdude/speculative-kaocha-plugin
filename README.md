@@ -1,9 +1,9 @@
 <img src="https://raw.githubusercontent.com/borkdude/speculative/master/logo/favicon-160.png">
 
+# speculative kaocha plugin
+
 [![Clojars Project](https://img.shields.io/clojars/v/speculative/kaocha-plugin.svg)](https://clojars.org/speculative/kaocha-plugin)
 [![cljdoc badge](https://cljdoc.org/badge/speculative/kaocha-plugin)](https://cljdoc.org/d/speculative/kaocha-plugin/CURRENT)
-
-# speculative kaocha plugin
 
 This [kaocha](https://github.com/lambdaisland/kaocha) plugin instruments tests
 with [speculative](https://github.com/borkdude/speculative) clojure.core specs.
