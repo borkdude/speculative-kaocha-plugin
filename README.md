@@ -10,19 +10,17 @@ with [speculative](https://github.com/borkdude/speculative) clojure.core specs.
 
 ## Installation
 
-Include this plugin as a dependency. E.g. for `tools.deps.alpha`:
+### Tools.deps
 
 ``` clojure
-{:aliases
-  {:test
-    {:extra-deps
-      {lambdaisland/kaocha {:mvn/version "0.0-389"}
-       speculative/kaocha-plugin {:git/url "https://github.com/borkdude/speculative-kaocha-plugin"
-                                  :sha "72e9fedaa15cca0384e055d551e695d6a2e27a53"}}}}}
+{:deps {speculative/kaocha-plugin {:mvn/version "0.0.1"}}}
 ```
 
-A Clojars release will be made available soon. If interested, feel free to
-remind [@borkdude](https://twitter.com/borkdude) on Clojurians Slack or Twitter.
+### Leiningen / Boot
+
+``` clojure
+[speculative/kaocha-plugin "0.0.1"]
+```
 
 ## Configuration
 
